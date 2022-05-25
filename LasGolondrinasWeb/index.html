@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Finca Las Golondrinas</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/golondrinas.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.png" alt="..." /></a>
+                <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.png" alt="..." /></a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -39,9 +39,9 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Las Golondrinas!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Servicios</a>
+                <div class="masthead-heading text-uppercase">Bienvenidos a Las Golondrinas!</div>
+                <div class="masthead-subheading">Lugar donde la aventura, diversión y relax no faltarán</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#contact">Reservar</a>
             </div>
         </header>
         <!-- Informacion-->
@@ -296,8 +296,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Reservaciones</h2>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
@@ -311,26 +310,26 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" id="name" type="text" placeholder="Nombre *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Este campo es obligatorio.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" placeholder="Email *" data-sb-validations="required,email" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Este campo es obligatorio.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <input class="form-control" id="phone" type="tel" placeholder="Número celular *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Este campo es obligatorio.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <textarea class="form-control" id="message" placeholder="Descripción *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Este campo es obligatorio.</div>
                             </div>
                         </div>
                     </div>
@@ -340,7 +339,7 @@
                     <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
+                            <div class="fw-bolder">Formulario guardado con éxito!</div>
                             To activate this form, sign up at
                             <br />
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
@@ -350,9 +349,9 @@
                     <!---->
                     <!-- This is what your users will see when there is-->
                     <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error, no se guardó la Información!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar</button></div>
                 </form>
             </div>
         </section>
