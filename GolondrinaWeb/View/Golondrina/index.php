@@ -310,7 +310,7 @@
             </div>
         </div> -->
         <!-- Contact-->       
-        <form action="" id="formBook">
+        <form action="../../Controller/insertReserva.php" method="POST">
             <div class="container-form">
                 <div class="contact-box">
                     <div class="left"></div>
@@ -318,15 +318,16 @@
                         <h2>RESERVAR</h2>
                         
                         <div class="form-group">
-                        <label for="fullName" class=" form-label">Nombre Completo</label>				
-                        <input type="text" class="form-control field-form" placeholder="Nombre Completo" id="fullName" data-sb-validations="required">
+                        <label for="nombreCompleto" class=" form-label">Nombre Completo</label>				
+                        <input type="text" class="form-control field-form" name="nombreCompleto" placeholder="Nombre Completo" data-sb-validations="required">
                         <div class="invalid-feedback" data-sb-feedback="fullName:required">Este campo es obligatorio.</div>
                         </div>
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="text" class="field-form" placeholder="Correo Electrónico" id="email">
+
+                        <label for="correo">Correo</label><br/>
+                        <input class="field-form" type="text" name="correo" placeholder="correo"><br/>
                         
-                        <label for="phone" class="form-label">Número Telefónico</label>
-                        <input type="text" class="field-form" placeholder="Número Telefónico" id="phone">
+                        <label for="telefono" class="form-label">Número Telefónico</label>
+                        <input type="text" class="field-form" placeholder="Número Telefónico" name="telefono">
                         
                         <div class="row-form">
                                 <div>
@@ -339,11 +340,10 @@
                                     <input type="date" name="checkout" class="field-form form-controler" id="checkout" placeholder="dd/mm/aaaa">
                                 </div>
                         </div>
-                        <label for="room" class="form-label">Seleccione una habitación</label>
-                        <select name="room" id="room" class="field-form">
+                        <label for="habitacion" class="form-label">Seleccione una habitación</label>
+                        <select name="habitacion" id="habitacion" class="field-form">
                             
                         <?php
-                        $query = array('nombreHabitacion'=>'H1');
                         $habitaciones = $name->find(); 
                         foreach($habitaciones as $habitacion): ?>                            
                         
@@ -362,15 +362,15 @@
                                 <input type="number" class="field-form form-controler" id="capacity_child" name="capacity_adult">                        
                             </div>
                         </div>
-                        <label for="room" class="form-label">Recreaciones adicionales</label>
-                        <select name="room" id="room" class="field-form">
+                        <label for="recreacion" class="form-label">Recreaciones adicionales</label>
+                        <select name="recreacion" id="recreacion" class="field-form">
                             <option>Piscina</option>
                             <option>Fogatas</option>
                             <option>Area de parrilladas</option>
                             <option>Visita a la granja</option>
                         </select> 
         
-                        <button class="form-btn">Enviar</button>				
+                        <button class="form-btn" type="submit" required="required" name="Enviar Datos">Enviar</button>				
                     </div>
                 </div>
             </div>
@@ -393,19 +393,19 @@
                         <div class="col-md-6">
                             <div class="form-group">
          -->                        <!-- Name input-->
-        <!--                         <input class="form-control field-form" id="name" type="email" placeholder="Nombre *" data-sb-validations="required" />
+        <!--                         <input class="form-control field-form" id="name" type="correo" placeholder="Nombre *" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="name:required">Este campo es obligatorio.</div>
                             </div>
                             <div class="form-group">
-         -->                        <!-- Email address input-->
-        <!--                         <input class="form-control" id="email" type="email" placeholder="Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Este campo es obligatorio.</div>
+         -->                        <!-- correo address input-->
+        <!--                         <input class="form-control" id="correo" type="correo" placeholder="correo *" data-sb-validations="required,correo" />
+                                <div class="invalid-feedback" data-sb-feedback="correo:required">An correo is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="correo:correo">Este campo es obligatorio.</div>
                             </div>
                             <div class="form-group mb-md-0">
-         -->                        <!-- Phone number input-->
-        <!--                         <input class="form-control" id="phone" type="tel" placeholder="Número celular *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Este campo es obligatorio.</div>
+         -->                        <!-- telefono number input-->
+        <!--                         <input class="form-control" id="telefono" type="tel" placeholder="Número celular *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="telefono:required">Este campo es obligatorio.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
