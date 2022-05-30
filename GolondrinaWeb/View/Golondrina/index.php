@@ -9,6 +9,9 @@
         ['_id' => $id]
     );
 
+    require_once("connect_dataHabitaciones.php");
+    $datos = $name->find();   
+
 ?>
 
 
@@ -338,10 +341,14 @@
                         </div>
                         <label for="room" class="form-label">Seleccione una habitación</label>
                         <select name="room" id="room" class="field-form">
-                            <option>Habitación 1</option>
-                            <option>Habitación 1</option>
-                            <option>Habitación 1</option>
-                            <option>Habitación 1</option>
+                            
+                        <?php
+                        $query = array('nombreHabitacion'=>'H1');
+                        $habitaciones = $name->find(); 
+                        foreach($habitaciones as $habitacion): ?>                            
+                        
+                        <option> <?php echo $habitacion["nombreHabitacion"]; ?> </option>
+                        <?php endforeach?>
                         </select>
                         <br/>
                         <h5>Capacidad</h5>
