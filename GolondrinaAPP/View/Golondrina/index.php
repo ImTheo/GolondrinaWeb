@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 $client = new MongoDB\Client('mongodb+srv://YullianaRoman:1234Yul@cluster0.5vmpd.mongodb.net/test');
 $companydb = $client->companydb;
@@ -25,21 +25,21 @@ $datos = $name->find();
     <meta name="author" content="" />
     <title>Finca Las Golondrinas</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="view/golondrina///img/golondrinas.png" />
+    <link rel="icon" type="image/x-icon" href="assets/img/golondrinas.png" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="view/golondrina/css/styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="view/golondrina/assets/img/navbar-logo.png" alt="..." /></a>
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
@@ -114,7 +114,7 @@ $datos = $name->find();
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="view/golondrina/assets/img/portfolio/1.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Hospedaje</div>
@@ -129,7 +129,7 @@ $datos = $name->find();
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="view/golondrina/assets/img/portfolio/2.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Zona Húmeda</div>
@@ -144,7 +144,7 @@ $datos = $name->find();
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="view/golondrina/assets/img/portfolio/3.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Espacios al aire libre</div>
@@ -159,7 +159,7 @@ $datos = $name->find();
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="view/golondrina/assets/img/portfolio/4.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Canchas Deportivas</div>
@@ -174,7 +174,7 @@ $datos = $name->find();
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="view/golondrina/assets/img/portfolio/5.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Zona de Fogata</div>
@@ -189,7 +189,7 @@ $datos = $name->find();
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="view/golondrina/assets/img/portfolio/6.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Convivencia con Animales</div>
@@ -209,7 +209,7 @@ $datos = $name->find();
             </div>
             <ul class="timeline">
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="view/golondrina/assets/img/about/1.jpg" alt="..." /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Nuestro comienzo</h4>
@@ -220,7 +220,7 @@ $datos = $name->find();
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="view/golondrina/assets/img/about/2.jpg" alt="..." /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>Misión</h4>
@@ -231,7 +231,7 @@ $datos = $name->find();
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="view/golondrina/assets/img/about/3.jpg" alt="..." /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>Visión</h4>
@@ -265,7 +265,7 @@ $datos = $name->find();
             <div class="row">
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="view/golondrina/assets/img/team/1.jpg" alt="..." />
+                        <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
                         <h4>Finca "Las Golondrinas"</h4>
                         <p class="text-muted">Facebook</p>
                         <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a> -->
@@ -275,7 +275,7 @@ $datos = $name->find();
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="view/golondrina/assets/img/team/2.jpg" alt="..." />
+                        <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
                         <h4>las_golondrinas.ec</h4>
                         <p class="text-muted">Instagram</p>
                         <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
@@ -285,7 +285,7 @@ $datos = $name->find();
                 </div>
                 <!-- <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src=view/golondrina/assets/img/team/3.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
                             <h4>Larry Parker</h4>
                             <p class="text-muted">Lead Developer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
@@ -301,6 +301,26 @@ $datos = $name->find();
             </div>
         </div>
     </section>
+    <!-- Reservaciones-->
+    <!-- <div class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- Contact-->
     <form action="../../Controller/insertReserva.php" method="POST" id="formBook">
         <div class="container-form">
             <div class="contact-box">
@@ -459,7 +479,7 @@ $datos = $name->find();
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="view/golondrina/assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -467,7 +487,7 @@ $datos = $name->find();
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Hospedaje</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="view/golondrina/assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
                                 <p>Ofrecemos hermosas habitaciones para hospedarse, con vistas maravillosas hacia la naturaleza</p>
                                 <ul class="list-inline">
                                     
@@ -490,7 +510,7 @@ $datos = $name->find();
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="view/golondrina/assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -498,7 +518,7 @@ $datos = $name->find();
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Zona Humeda</h2>
                                 <p class="item-intro text-muted">Hidro masaje-Sauna-Turco</p>
-                                <img class="img-fluid d-block mx-auto" src="view/golondrina/assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
                                 <p>Contamos con las siguientes instalaciones:</p>
                                 <li>Piscina para adultos <li>
                                 <li>Piscina para niños</li>
@@ -532,14 +552,14 @@ $datos = $name->find();
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="view/golondrina/assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Espacios Exteriores</h2>
-                                <img class="img-fluid d-block mx-auto" src="view/golondrina/assets/img/portfolio/3.jpg" alt="..." />
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
                                 <p>La Finca Las Golondrinas cuenta con espacios al aire libre en los que puedes disfrutar con tu familia, disfrutar de nuestras areas verdes. </p>                               
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-xmark me-1"></i>
@@ -556,7 +576,7 @@ $datos = $name->find();
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="view/golondrina/assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -564,7 +584,7 @@ $datos = $name->find();
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="view/golondrina/assets/img/portfolio/4.jpg" alt="..." />
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <ul class="list-inline">
                                     <li>
@@ -591,7 +611,7 @@ $datos = $name->find();
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="view/golondrina/assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -599,7 +619,7 @@ $datos = $name->find();
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="view/golondrina/assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <ul class="list-inline">
                                     <li>
@@ -626,7 +646,7 @@ $datos = $name->find();
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="view/golondrina/assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -634,7 +654,7 @@ $datos = $name->find();
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="view/golondrina/assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <ul class="list-inline">
                                     <li>
