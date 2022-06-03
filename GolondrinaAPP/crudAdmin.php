@@ -139,7 +139,7 @@ $reservacion = $companydb->reservaciones;
             <div class="row">
                 <div class="col">
                     <div class="form-group">
-                        <form action="insertActvity.php" method="POST">
+                        <form action="insertActivity.php" method="POST">
                             <label for="id">ID</label><br />
                             <input class="form-control" type="text" name="id"><br />
                             <label for="name">Nombre de la actividad </label><br />
