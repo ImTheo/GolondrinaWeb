@@ -182,17 +182,17 @@ $data = $activity->find();
                     <input type="email" class="field-form" type="text" name="correo" value placeholder="@gmail.com"><br />
 
                     <label for="telefono" class="form-label">Número Telefónico</label>
-                    <input type="tel" class="field-form" placeholder="Número Telefónico" name="telefono" pattern="[0-9]{9}" >
+                    <input type="tel" class="field-form" placeholder="Número Telefónico" name="telefono" pattern="[0-9]{9}" min="-1" >
 
                     <div class="row-form">
                         <div>
                             <label for="checkin" class="form-label">Fecha de partida</label>
-                            <input type="date" class="field-form form-controler" id="checkin" min="20/05/2022">
+                            <input type="date" class="field-form form-controler" id="checkin" value = "03/06/2022" min="03/06/2022" max= "17/09/2022">
                         </div>
 
                         <div>
                             <label for="checkout" class="form-label">Fecha de retorno</label>
-                            <input type="date" name="checkout" class="field-form form-controler" id="checkout" placeholder="dd/mm/aaaa">
+                            <input type="date" name="checkout" class="field-form form-controler" id="checkout" placeholder="dd/mm/aaaa" value = "03/06/2022" min="03/06/2022" max= "17/09/2022">
                         </div>
                     </div>
                     <label for="habitacion" class="form-label">Seleccione una habitación</label>
