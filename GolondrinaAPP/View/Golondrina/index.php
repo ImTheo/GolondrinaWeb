@@ -330,15 +330,15 @@ $datos = $name->find();
 
                     <div class="form-group">
                         <label for="nombreCompleto" class=" form-label">Nombre Completo</label>
-                        <input type="text" class="form-control field-form" name="nombreCompleto" placeholder="Nombre Completo" data-sb-validations="required">
+                        <input type="text" class="form-control field-form" name="nombreCompleto" placeholder="Nombre Completo" data-sb-validations="required" minlength="2" maxlength="30">
                         <div class="invalid-feedback" data-sb-feedback="fullName:required">Este campo es obligatorio.</div>
                     </div>
 
                     <label for="correo">Correo</label><br />
-                    <input class="field-form" type="text" name="correo" placeholder="correo"><br />
+                    <input type="email" class="field-form" type="text" name="correo" placeholder="correo"><br />
 
                     <label for="telefono" class="form-label">Número Telefónico</label>
-                    <input type="text" class="field-form" placeholder="Número Telefónico" name="telefono">
+                    <input type="tel" class="field-form" placeholder="Número Telefónico" name="telefono" pattern="[0-9]{9}" >
 
                     <div class="row-form">
                         <div>
@@ -366,11 +366,11 @@ $datos = $name->find();
                     <div class="row-form">
                         <div class="col">
                             <label for="capacity_adult" class="form-label">Adultos</label>
-                            <input type="number" class="field-form form-controler" id="capacity_adult" name="capacity_adult">
+                            <input type="number" class="field-form form-controler" id="capacity_adult" name="capacity_adult" min="1" max="20">
                         </div>
                         <div class="col">
                             <label for="capacity_child" class="form-label">Niños</label>
-                            <input type="number" class="field-form form-controler" id="capacity_child" name="capacity_adult">
+                            <input type="number" class="field-form form-controler" id="capacity_child" name="capacity_child" min="1" max="20">
                         </div>
                     </div>
                     <label for="recreacion" class="form-label">Recreaciones adicionales</label>
