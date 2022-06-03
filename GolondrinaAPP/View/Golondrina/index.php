@@ -179,7 +179,7 @@ $data = $activity->find();
                     </div>
 
                     <label for="correo">Correo</label><br />
-                    <input type="email" class="field-form" type="text" name="correo" placeholder="correo"><br />
+                    <input type="email" class="field-form" type="text" name="correo" value placeholder="@gmail.com"><br />
 
                     <label for="telefono" class="form-label">Número Telefónico</label>
                     <input type="tel" class="field-form" placeholder="Número Telefónico" name="telefono" pattern="[0-9]{9}" >
