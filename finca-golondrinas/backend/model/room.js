@@ -28,6 +28,10 @@ price:{
 image:{
     type:String,
     required:true
+},
+avaliable:{
+    type:Boolean,
+    required:true
 }
 });
 

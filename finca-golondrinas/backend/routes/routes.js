@@ -30,6 +30,20 @@ router.get('/room/:id', (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+router.get('/roomsAvalible', (req, res) => {
+    var rooms = [];
+    roomSchema
+        .find().then((data) => {
+            for (const iterator of data) {
+                if(iterator.avaliable)
+                rooms.push(iterator)
+            }
+            res.json(rooms)
+            
+        })
+        .catch((error) => res.json({ message: error }));
+});
+
 router.put('/room/:id', (req, res) => {
     const room = req.body;
     const {id} = req.params;
