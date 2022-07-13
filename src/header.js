@@ -43,3 +43,5 @@ var Header = React.createClass({
       );
     }
   });
+
+  export default Header;
