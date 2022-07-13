@@ -188,4 +188,4 @@ function crudAdmin() {
 
 
 
-export default Administrator;
+export default crudAdmin;
