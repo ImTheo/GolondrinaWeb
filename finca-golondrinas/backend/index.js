@@ -1,9 +1,9 @@
 const express= require('express');
 const mongoose= require('mongoose');
-const userRoutes=require('./routes/routes')
+const userRoutes=require('./routes')
 
 const app= express();
-const port=process.env.PORT || 3000;
+const port=3003;
 
 app.use(express.json());
 app.use('/api',userRoutes);

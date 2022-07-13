@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 const roomSchema = mongoose.Schema({
 id:{
     type:String,
-    required: true
-
+    required: true,
+    trim:true,
+    unique:true
 },
 name:{
     type:String,
@@ -29,7 +30,7 @@ image:{
     type:String,
     required:true
 },
-avaliable:{
+available:{
     type:Boolean,
     required:true
 }

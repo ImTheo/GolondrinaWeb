@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const reservationSchema = mongoose.Schema({
 id:{
     type:String,
-    required: true
-
+    required: true,
+    unique:true
 },
 name:{
     type:String,
@@ -27,11 +27,11 @@ cellphone:{
 }
 ,
 checkin:{
-    type:Boolean,
+    type:String,
     required:true
 },
 checkout:{
-    type:Boolean,
+    type:String,
     required:true
 }
 });
