@@ -3,7 +3,7 @@ const mongoose= require('mongoose');
 const userRoutes=require('./routes')
 
 const app= express();
-const port=3003;
+const port=5000;
 
 app.use(express.json());
 app.use('/api',userRoutes);
