@@ -188,4 +188,4 @@ function crudAdmin() {
 
 
 
-export default crudAdmin;
+export default crudAdmintea;
