@@ -19,7 +19,7 @@ export function Activities() {
           <a
             className="portfolio-link"
             data-bs-toggle="modal"
-            href="#portfolioModal1"
+            href={"#"+data.id}
           >
             <div className="portfolio-hover">
               <div className="portfolio-hover-content">

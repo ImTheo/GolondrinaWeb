@@ -5,7 +5,7 @@ import {Contact} from './components/Contact';
 import {Footer} from './components/Footer';
 import {Activities} from './components/Activities';
 import {Modals} from './components/Modals';
-
+import {Form} from "./components/Form";
 
 import './App.css';
 
@@ -17,7 +17,9 @@ function App() {
       <AboutUs/>
       <Modals/>
       <Contact/>
+      <Form/>
       <Footer/>
+      
     </div>
   );
 }
