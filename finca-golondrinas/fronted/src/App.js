@@ -6,6 +6,7 @@ import {Footer} from './components/Footer';
 import {Activities} from './components/Activities';
 import {Modals} from './components/Modals';
 import {Form} from "./components/Form";
+import crudAdmin from "../crudAdmin";
 
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
       <Contact/>
       <Form/>
       <Footer/>
+      <crudAdmin/>
       
     </div>
   );
