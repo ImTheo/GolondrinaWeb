@@ -67,7 +67,7 @@ function crudAdmin() {
           <table class="table table-sm">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">Id</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Capacidad-Adultos</th>
                 <th scope="col">Capacidad-Niños</th>
