@@ -1,26 +1,25 @@
 import React from "react";
-import {Navegation} from './components/Navegation';
-import {AboutUs} from './components/AboutUs';
-import {Contact} from './components/Contact';
-import {Footer} from './components/Footer';
-import {Activities} from './components/Activities';
-import {Modals} from './components/Modals';
-import {Form} from "./components/Form";
+import {Homepage} from "./components/Homepage";
+import {CrudAdmin as Admin} from "./components/CrudAdmin";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navegation/>      
-      <Activities/>
-      <AboutUs/>
-      <Modals/>
-      <Contact/>
-      <Form/>
-      <Footer/>
-      
-    </div>
+
+  <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Homepage />} />
+    <Route path="admin/*" element={<Admin />} />
+  </Routes>
+  </BrowserRouter>
+
   );
 }
 

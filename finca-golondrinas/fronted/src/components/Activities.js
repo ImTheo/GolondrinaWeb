@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export function Activities() {
+  
   const [backendData, setBackendData] = useState([{}]);
 
   useEffect(() => {
