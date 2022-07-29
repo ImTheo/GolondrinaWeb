@@ -6,7 +6,7 @@ import {Contact} from './Contact';
 import {Footer} from './Footer';
 import {Activities} from './Activities';
 import {Modals} from './Modals';
-import {ReservationForm} from "./ReservationForm";
+import {Form} from "./Form";
 
 export function Homepage() {
     return (     
@@ -16,7 +16,7 @@ export function Homepage() {
     <AboutUs/>
     <Modals/>
     <Contact/>
-    <ReservationForm/>
+    <Form/>
     <Footer/>
     </div>
     );
