@@ -9,9 +9,9 @@ const router = express.Router();
 
 router.post('/room', (req, res) => {
     const room = roomSchema(req.body);
-    reservation
+    room
         .save().then((data) => res.json(data))
-        .catch((error) => res.json({ message: error })); 
+        .catch((error) => res.json({ message: error }));
 });
 router.get('/rooms', (req, res) => {
 
@@ -20,13 +20,34 @@ router.get('/rooms', (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
-router.get('/room/:id', (req, res) => {
-    const { id } = req.params;
+router.get('/room/:name', async (req, res) => {
+    //const{codigo}=;
+    const roomSearched = await roomSchema.findOne({ name: req.params.name })
+    if (!roomSearched) return res.sendStatus(404)
+    return res.json(roomSearched)
+});
 
+router.put('/roomDisailable/:name', (req, res) => {
     roomSchema
-        .findById(id)
-        .then((data) => res.json(data))
+        .updateOne(
+            { name: req.params.name },
+            { $set: { available: false } }).then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
+});
+
+router.put('/roomAvailable/:name', (req, res) => {
+    roomSchema
+        .updateOne(
+            { name: req.params.name },
+            { $set: { available: true } }).then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
+router.get('/rooms/:id', async (req, res) => {
+    console.log(req.params.id);
+    const roomSearched = await roomSchema.findOne({ id: req.params.id })
+    if (!roomSearched) return res.sendStatus(404)
+    return res.json(roomSearched)
 });
 
 router.get('/roomsAvailable', (req, res) => {
@@ -34,10 +55,10 @@ router.get('/roomsAvailable', (req, res) => {
     roomSchema
         .find().then((data) => {
             for (const iterator of data) {
-                if(iterator.available)
-                rooms.push(iterator)
+                if (iterator.available)
+                    rooms.push(iterator)
             }
-            res.json(rooms)            
+            res.json(rooms)
         })
         .catch((error) => res.json({ message: error }));
 });
@@ -50,20 +71,25 @@ router.get('/rooms', (req, res) => {
 });
 
 
-router.put('/room/:id', (req, res) => {
-    const room = req.body;
-    const {id} = req.params;
+router.put('/rooms/:id', (req, res) => {
     roomSchema
-        .findByIdAndUpdate(id,room).then((data) => res.json(data))
+        .updateOne({ id: req.params.id },
+            { $set: { 
+                name: req.body.name,
+                adults: req.body.adults,
+                children: req.body.children,
+                description: req.body.description,
+                image: req.body.image,
+                price: req.body.price,
+                available: req.body.available
+             } }).then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
 
-router.delete('/room/:id', (req, res) => {
-    const { id } = req.params;
-    roomSchema
-        .findByIdAndDelete(id)
-        .then((data) => res.json(data))
-        .catch((error) => res.json({ message: error }));
+router.delete('/room/:id', async (req, res) => {
+    const roomRemoved = await roomSchema.remove({ id: req.params.id });
+    if (!roomRemoved) return res.sendStatus(404)
+    return res.sendStatus(204)
 });
 
 router.post('/reservation', (req, res) => {
@@ -84,25 +110,30 @@ router.get('/reservation/:id', (req, res) => {
     const { id } = req.params;
 
     reservationSchema
-        .findById(id)
+        .findOne({ "id": req.params.id })
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
 
 router.put('/reservation/:id', (req, res) => {
-    const reservation = req.body;
-    const {id} = req.params;
-    reservationSchema
-        .findByIdAndUpdate(id,reservation).then((data) => res.json(data))
+    roomSchema
+        .updateOne({ id: req.params.id },
+            { $set: { 
+                name: req.body.name,
+                email: req.body.email,
+                recreations: req.body.recreations,
+                room: req.body.room,
+                cellphone: req.body.cellphone,
+                checkin: req.body.checkin,
+                checkout: req.body.checkout
+             } }).then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
 
-router.delete('/reservation/:id', (req, res) => {
-    const { id } = req.params;
-    reservationSchema
-        .findByIdAndDelete(id)
-        .then((data) => res.json(data))
-        .catch((error) => res.json({ message: error }));
+router.delete('/reservation/:id', async (req, res) => {
+    const reservationRemoved = await reservationSchema.remove({ id: req.params.id });
+    if (!reservationRemoved) return res.sendStatus(404)
+    return res.sendStatus(204)
 });
 
 
@@ -130,18 +161,23 @@ router.get('/activity/:id', (req, res) => {
 });
 
 router.put('/activity/:id', (req, res) => {
-    const activity = req.body;
-    const {id} = req.params;
-    activitySchema
-        .findByIdAndUpdate(id,activity).then((data) => res.json(data))
+    roomSchema
+        .updateOne({ id: req.params.id },
+            { $set: { 
+                name: req.body.name,
+                description: req.body.description,
+                children: req.body.children,
+                description: req.body.description,
+                image: req.body.image,
+                price: req.body.price,
+                available: req.body.available
+             } }).then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
 
-router.delete('/activity/:id', (req, res) => {
-    const { id } = req.params;
-    activitySchema
-        .findByIdAndDelete(id)
-        .then((data) => res.json(data))
-        .catch((error) => res.json({ message: error }));
+router.delete('/activity/:id', async (req, res) => {
+    const activityRemoved = await activitySchema.remove({ id: req.params.id });
+    if (!activityRemoved) return res.sendStatus(404)
+    return res.sendStatus(204)
 });
 module.exports = router;
